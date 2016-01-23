@@ -1,0 +1,11 @@
+Reflections - Lesson 2 - version-control
+
+
+===================================================
+What happens when you initialize a repository? Why do you need to do it?
+========================================================
+
+A .git directory is created. You create the repository to keep a record of all changes to all tracked files. A git commit is a snapshot of a git repository. These are services that just having files in a folder can't perform.
+
+
+
