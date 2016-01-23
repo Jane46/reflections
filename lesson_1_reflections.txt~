@@ -1,0 +1,70 @@
+Reflections
+Lesson 1
+
+
+===============================================
+How did viewing a diff between two versions help you spot the bug?
+================================================
+
+It eliminated huge chunks of the file and showed only the lines where there had been changes. Because there was vastly less text to scan, searching for the changes went much faster.
+
+
+==============================================
+How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+============================================================
+
+You can freely experiment with or change your code without worrying that you are breaking what you've already created. If you find that you've messed things up, you can always go back to an earlier version where things weren't broken.
+
+You don't have to waste mental energy trying to remember which changes you made that might have caused the problem.
+
+Instead, you can use the diff function to compare current and older versions to find the guilty change.
+
+
+=======================================================
+What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google Docs does?
+====================================================
+
+The pros are that manual commit is more flexible and that it allows you to make meanginful commits, producing versions that are usable and changes that are easily tracked.
+
+The con is that the programmer might forget to commit at the proper times or be distracted or called away, meaning that the programmer could lose code he/she wrote because it wasn't saved. Or it could mean that if the programmer didn't return to the coding for three weeks, he'd have a non-usable version with incomplete code and no message as to the changes he/she'd made.
+
+Automatic saving would mean that code would be saved. However, the code would be saved at arbitrary times with no relationship to the coding being done. If it's being saved too often, you'd end up with an unmanageable number of commits or file versions.
+
+
+====================================================
+Why do you think some version control systems, like Git, allow saving multliple files in one commit, whle others, like Google Docs, treat each file separately?
+=========================================================
+
+Git was created by a programmer with programming in mind. In programming, changes you make to one file often affect other files. Google Docs, on the other hand, is intended for a general audience for non-specialized work. Google Docs was not created for programmers. In the most common everyday scenarios, files usually aren't interlinked with each other the way they are in programming.
+
+
+===================================================
+How can you use the commands git log and git diff to view the history of files?
+===================================================
+
+Git log shows you the list of commits. You can scroll through it to see log messages describing the changes made in each commit. If you want to see exactly what change was made in a particular commit, you use the git diff command. Here are the steps:
+
+1. git log to get the list of commits. Hit the d key to scroll down through the list of commits til you find the one you're interested in
+
+2. Once you find the two commits you want to compare, hit the q key to get out of that command. Copy the two commit IDs that you want to compare. Use this command:
+
+git diff f19cb1b80fe27e938e4d72770ca0a42f25e99ecc b0678b161fcf74467ed3a63110557e3d6229cfa6
+
+3. Scroll down through the diff screen using the down arrow. (d might do it as well, not sure)
+
+===================================================
+How might using version control make you more confident to make changes that could break something?
+========================================================
+
+If you "break" something or make so many changes to the code that you can't remember exactly how you've altered it, you can easily revert to the previous version, which was your starting point. That will give you confidence to code without worrying that you'll mess up the most recent version.
+
+===========================================
+
+
+
+
+
+
+
+
+
