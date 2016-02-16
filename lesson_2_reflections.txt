@@ -14,5 +14,45 @@ How is the staging area different from the working directory and the repository?
 
 The staging area shows you which files will be included in a commit. This would help prevent unintentional additions to your repository.
 
-git 
+=============================================
+How can you use the staging area to make sure you have one commit per logical change?
+==========================================
+
+You can use git diff and git diff --staged to see what changes you've made and be sure that it's just one logical change.
+
+
+=======================================
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+=============================================
+
+If I wanted to develop in a new direction and try something experimental without screwing up the existing version, I can do my development in a branch, make my commits there. If things are going well, I can merge into the master branch and resume developing there. If things don't go so well, I can abandon the branch and return to the master, where I will find a well-functioning version of my program.
+
+
+==============================================
+How do the diagrams help you visualize the branch structure?
+==============================================
+
+I did not enjoy doing the diagrams using a keyboard, but I have to admit I found them very helpful for understanding and visualizing the branch structure, getting a better idea of how git works and explaining some earlier git output that I didn't understand at the time.
+
+
+=============================================
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+=============================================
+
+This was a complete failure for me. I got a message saying there were conflicts and I couldn't merge til I solved the conflicts. When I ran git status, it told me that I was one commit ahead of my branch. I figured some change I'd made hadn't been committed. But I couldn't remember which change that might be. Further, I thought the change probably had been made in either the easy-mode branch or the coins branch. But git wouldn't allow me to switch to those branches, saying I had to solve the merge issue, which is exactly what I was trying to do. I didn't really know what to do so I did an add game.js and then a commit.js and that allowed the merge to go ahead. But then when I did a git status, it told me I was now 6 commits ahead of origin/master. I really didn't know what was going on except that I guessed there was a big mismatch between easy-mode, coins, and master and master was outdated in some fashion. I am lost.
+
+I started over from scratch. I cloned the asteroids repository and went through my notes to make changes to it. I've made the bug fix in the master branch, added the easy-mode branch and committed the new easy-mode feature (2 fragments instead of three) in that branch.
+
+I now receive the "Your branch is ahead of 'origin/master' by 1 commit' message when I switched from easy-mode branch to master branch. I now think that probably means that easy-mode comes 1 commit after the tip of master. 
+
+This time, the merge worked. I'm not sure how or why those conflicts from before happened.
+
+
+=============================================
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+=================================================
+
+The pro of Git's automatic merging is that it saves a lot of time and hassle. The con is that if it did not raise a conflict alert requiring human resolution when there is ambiguity, then it could make wrong choices. It's a nice combination of automatic and manual. It automatically does the clearly agreed-upon changes and lets the user resolve more ambiguous changes.
+
+
 
