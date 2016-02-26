@@ -23,6 +23,18 @@ What is the benefit of having a copy of the last known state of the remote store
 
 If you're current and in synch with the remote, you will be current with what your collaborators are doing. You won't be working on out-of-date code, reinventing the wheel, or working at cross-purposes with your collaborators.
 
+----------------------------------
+How would you collaborate without using Git or GitHub? What would be easier, and what would be harder?
+------------------------------
+I suppose a master file would be created with the word "master" in it and somebody would be designated as the only person who could make changes to that file. The file would be downloadable by everybody on the team. Perhaps a version number would also be appended so that people could tell whether they had the current version. Every time a change is made, the version number would be incremented by 1. A file would have a name like: asteroidsMaster-127. There would then be a lot of emailing around to discuss proposed changes to the master. When agreement was reached, the designated person would change the master and increment the version number, e.g. asteroidsMaster-128.
+
+We all know how emailing can quickly overwhelm you, especially if lots of people are participating. Perhaps instead people could put their comments in a file stored online, and the discussion would take place there. Something like a wiki.
+
+Norms would have to be established as to when/how the plug would be pulled and consensus would be declared. Otherwise discussion could go on forever.
+
+It does seem as if GitHub is a dedicated answer to this problem and is a nifty way to go.
+
+------------------------------------------
 
 
 
